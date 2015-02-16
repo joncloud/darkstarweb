@@ -29,6 +29,7 @@ namespace Dsp.Web.Accounting
         public Dictionary<string, string> Changes { get; set; }
         public string Description { get; set; }
         public string IPAddress { get; set; }
+        public string UserName { get; set; }
 
         public void AddChange<T>(string key, T change)
         {
@@ -74,7 +75,8 @@ namespace Dsp.Web.Accounting
             {
                 activity.Account = _context.Accounts.Add(new Account
                 {
-                    AccountId = AccountId
+                    AccountId = AccountId,
+                    UserName = UserName
                 });
             }
 

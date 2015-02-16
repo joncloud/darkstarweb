@@ -18,7 +18,8 @@ namespace Dsp.Web
             {
                 AccountId = id.Value,
                 Description = "Login",
-                IPAddress = context.Request.RemoteIpAddress
+                IPAddress = context.Request.RemoteIpAddress,
+                UserName = context.UserName
             };
 
             return auditor.Execute();
