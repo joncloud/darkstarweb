@@ -1,0 +1,43 @@
+﻿<div class="container" ng-controller="DashboardController">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Characters</h2>
+            <div class="list-group">
+                <a ng-repeat="character in characters"
+                   ng-href="#/Characters/{{character.CharacterId}}"
+                   class="list-group-item">
+                    {{character.Name}}
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>Auction House</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Item</th>
+                        <td>Sale</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in items">
+                        <td>{{item.Date}}</td>
+                        <td>{{item.ItemName}}</td>
+                        <td>{{item.SalePrice}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h2>Online Players</h2>
+            <div class="list-group">
+                <a ng-repeat="onlinePlayer in onlinePlayers"
+                   ng-href="#/Characters/{{onlinePlayer.CharacterId}}"
+                   class="list-group-item">
+                    {{onlinePlayer.Name}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

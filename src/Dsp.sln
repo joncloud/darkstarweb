@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22310.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsp", "Dsp\Dsp.csproj", "{DFC120CE-BCDE-417B-A524-C43502173D54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsp.Web", "Dsp.Web\Dsp.Web.csproj", "{D459E80C-534A-4A00-819C-C1FBF0779062}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFC120CE-BCDE-417B-A524-C43502173D54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC120CE-BCDE-417B-A524-C43502173D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC120CE-BCDE-417B-A524-C43502173D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC120CE-BCDE-417B-A524-C43502173D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D459E80C-534A-4A00-819C-C1FBF0779062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D459E80C-534A-4A00-819C-C1FBF0779062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D459E80C-534A-4A00-819C-C1FBF0779062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D459E80C-534A-4A00-819C-C1FBF0779062}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
