@@ -8,6 +8,11 @@
             <input type="text" id="inputEmail" class="form-control" placeholder="User name" ng-model="userName" ng-disabled="busy" required autofocus>
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="password" ng-disabled="busy" required>
+            <div class="checkbox" ng-visible="canSaveToken">
+                <label>
+                    <input type="checkbox" ng-model="rememberMe"> Remember me
+                </label>
+            </div>
         </div>
 
         <div class="row">

@@ -31,6 +31,12 @@
             $http.defaults.headers.common.Authorization = '';
             User.userName = '';
             Menu.menus = [];
+
+            // Clear out any token.
+            if (typeof (Storage) !== "undefined") {
+                localStorage.setItem('AuthorizationToken', '');
+            }
+
             $location.path('/SignIn');
         };
     }]);
