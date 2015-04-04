@@ -185,6 +185,9 @@
     <Compile Include="Characters\CharacterLinkshell.cs" />
     <Compile Include="Characters\GetLinkshellsAction.cs" />
     <Compile Include="Characters\LinkshellStatus.cs" />
+    <Compile Include="Chat\ChatController.cs" />
+    <Compile Include="Chat\ChatMessage.cs" />
+    <Compile Include="Chat\GetLinkshellChatMessages.cs" />
     <Compile Include="GetRoleNamesAction.cs" />
     <Compile Include="Menus\Menu.cs" />
     <Compile Include="Menus\MenusController.cs" />
