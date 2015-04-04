@@ -9,7 +9,6 @@ namespace Dsp
 {
     public class character
     {
-
         public byte[] abilities { get; set; }
         public long accid { get; set; }
         public virtual account account { get; set; }
@@ -17,6 +16,7 @@ namespace Dsp
         public byte[] assault { get; set; }
         public virtual ICollection<auction_house> auction_houses { get; set; }
         public character_exp character_exp { get; set; }
+        public virtual ICollection<character_inventory> character_inventories { get; set; }
         public virtual character_job character_job { get; set; }
         public virtual character_stats character_stats { get; set; }
         public long charid { get; set; }
@@ -72,6 +72,7 @@ namespace Dsp
                 HasRequired(x => x.pos_zone).WithMany(x => x.pos_characters).HasForeignKey(x => x.pos_zone_id);
                 HasRequired(x => x.home_zone).WithMany(x => x.home_characters).HasForeignKey(x => x.home_zone_id);
                 HasMany(x => x.account_sessions).WithRequired(x => x.character).HasForeignKey(x => x.charid);
+                HasMany(x => x.character_inventories).WithRequired(y => y.character).HasForeignKey(y => y.charid);
             }
         }
     }

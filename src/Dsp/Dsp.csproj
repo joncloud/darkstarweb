@@ -53,6 +53,7 @@
     <Compile Include="auto_translate_string.cs" />
     <Compile Include="character.cs" />
     <Compile Include="character_exp.cs" />
+    <Compile Include="character_inventory.cs" />
     <Compile Include="character_job.cs" />
     <Compile Include="character_location.cs" />
     <Compile Include="character_stats.cs" />

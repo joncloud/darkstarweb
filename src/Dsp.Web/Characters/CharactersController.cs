@@ -56,6 +56,16 @@ namespace Dsp.Web.Characters
             return action.Execute();
         }
 
+        [Route("{id}/Linkshells")]
+        public Task<HttpResponseMessage> GetLinkshells(long id, [FromUri]PageSettings pageSettings)
+        {
+            var action = new GetLinkshellsAction(_context);
+            action.CharacterId = id;
+            action.PageSettings = pageSettings;
+            action.RequestUri = Request.RequestUri;
+            return action.Execute();
+        }
+
         [Route("My")]
         public Task<HttpResponseMessage> GetMyCharacters([FromUri]PageSettings pageSettings)
         {

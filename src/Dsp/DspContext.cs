@@ -25,6 +25,7 @@ namespace Dsp
         public DbSet<character_job> character_jobs { get; set; }
         public DbSet<character_stats> character_stats { get; set; }
         public DbSet<character> characters { get; set; }
+        public DbSet<character_inventory> character_inventories { get; set; }
         public DbSet<item_basic> item_basics { get; set; }
         public DbSet<zone_settings> zone_settings { get; set; }
 

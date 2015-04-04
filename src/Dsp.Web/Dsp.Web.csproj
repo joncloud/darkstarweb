@@ -182,6 +182,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AuthenticateAction.cs" />
+    <Compile Include="Characters\CharacterLinkshell.cs" />
+    <Compile Include="Characters\GetLinkshellsAction.cs" />
+    <Compile Include="Characters\LinkshellStatus.cs" />
     <Compile Include="GetRoleNamesAction.cs" />
     <Compile Include="Menus\Menu.cs" />
     <Compile Include="Menus\MenusController.cs" />
