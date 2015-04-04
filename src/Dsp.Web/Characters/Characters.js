@@ -6,7 +6,7 @@
         .when(
             '/Characters/:id',
         {
-            templateUrl: 'Characters/Character.min.html'
+            templateUrl: 'Characters/Character.html'
         });
     }]);
 
@@ -18,6 +18,9 @@
         var refresh = function () {
             Characters.get({ id: $routeParams.id }, function (response) {
                 $scope.character = response;
+            });
+            Characters.getLinkshells({ id: $routeParams.id }, function (response) {
+                $scope.linkshells = response;
             });
         };
         refresh();
@@ -45,6 +48,9 @@
         return $resource('/api/Characters/:id',
             { id: '@id' },
             {
+                getLinkshells: {
+                    method: 'GET', params: { id: '@id' }, isArray: true, url: '/api/Characters/:id/Linkshells'
+                },
                 getMy: { method: 'GET', params: { id: 'My' }, isArray: true },
                 getOnline: { method: 'GET', params: { id: 'Online' }, isArray: true },
                 unstuck: {

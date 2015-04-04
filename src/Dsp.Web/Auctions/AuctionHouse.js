@@ -6,7 +6,7 @@
         .when(
           '/AuctionHouse',
         {
-            templateUrl: 'Auctions/AuctionHouse.min.html'
+            templateUrl: 'Auctions/AuctionHouse.html'
         });
     }]);
 

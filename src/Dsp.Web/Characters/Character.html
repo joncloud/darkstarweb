@@ -11,6 +11,22 @@
         </dl>
 
         <button class="btn btn-default" type="button" ng-disabled="!character.CanUnstuck || busy" ng-click="unstuck(character)">Unstuck</button>
+
+        <h3>Linkshells</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="linkshell in linkshells">
+                    <td>{{linkshell.Name}}</td>
+                    <td>{{linkshell.StatusText}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="col-md-4">
         <h2>Jobs</h2>

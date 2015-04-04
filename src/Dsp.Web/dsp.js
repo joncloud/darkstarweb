@@ -15,7 +15,7 @@
         .when(
           '/SignIn',
         {
-            templateUrl: 'SignIn.min.html',
+            templateUrl: 'SignIn.html',
             controller: 'SignInController'
         });
     }]);

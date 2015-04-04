@@ -235,48 +235,18 @@
     <Content Include="Accounting\Activities.html" />
     <Content Include="Accounting\ChangePassword.html" />
     <Content Include="Auctions\AuctionHouse.js" />
-    <Content Include="Auctions\AuctionHouse.min.html">
-      <DependentUpon>AuctionHouse.html</DependentUpon>
-    </Content>
-    <Content Include="Auctions\AuctionHouse.min.js">
-      <DependentUpon>AuctionHouse.js</DependentUpon>
-    </Content>
-    <Content Include="Characters\Character.min.html">
-      <DependentUpon>Character.html</DependentUpon>
-    </Content>
     <Content Include="Characters\Characters.js" />
-    <Content Include="Characters\Characters.min.js">
-      <DependentUpon>Characters.js</DependentUpon>
-    </Content>
-    <Content Include="Dashboard\Dashboard.min.html">
-      <DependentUpon>Dashboard.html</DependentUpon>
-    </Content>
     <Content Include="dsp.css" />
     <Content Include="Dashboard\Dashboard.js" />
-    <Content Include="Dashboard\Dashboard.min.js">
-      <DependentUpon>Dashboard.js</DependentUpon>
-    </Content>
     <Content Include="dsp.js" />
-    <Content Include="dsp.min.css">
-      <DependentUpon>dsp.css</DependentUpon>
-    </Content>
-    <Content Include="dsp.min.js">
-      <DependentUpon>dsp.js</DependentUpon>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Auctions\AuctionHouse.html" />
     <Content Include="Characters\Character.html" />
     <Content Include="Dashboard\Dashboard.html" />
     <Content Include="Menus\Menu.js" />
-    <Content Include="Menus\Menu.min.js">
-      <DependentUpon>Menu.js</DependentUpon>
-    </Content>
     <Content Include="SignIn.html" />
     <Content Include="Index.html" />
-    <Content Include="SignIn.min.html">
-      <DependentUpon>SignIn.html</DependentUpon>
-    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -302,31 +272,6 @@
     <EmbeddedResource Include="Migrations\201502161638131_CacheAccountUserName.resx">
       <DependentUpon>201502161638131_CacheAccountUserName.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="dsp.min.js.map">
-      <DependentUpon>dsp.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Dashboard\Dashboard.min.js.map">
-      <DependentUpon>Dashboard.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Characters\Characters.min.js.map">
-      <DependentUpon>Characters.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Auctions\AuctionHouse.min.js.map">
-      <DependentUpon>AuctionHouse.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Menus\Menu.min.js.map">
-      <DependentUpon>Menu.min.js</DependentUpon>
-    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

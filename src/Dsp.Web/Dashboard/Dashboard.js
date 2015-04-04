@@ -6,7 +6,7 @@
         .when(
           '/Dashboard',
         {
-            templateUrl: 'Dashboard/Dashboard.min.html'
+            templateUrl: 'Dashboard/Dashboard.html'
         });
     }]);
 
