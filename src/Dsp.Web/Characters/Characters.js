@@ -10,7 +10,7 @@
         });
     }]);
 
-    dspweb.controller('CharacterController', ['$scope', '$routeParams', 'Characters', function ($scope, $routeParams, Characters) {
+    dspweb.controller('CharacterController', ['$scope', '$location', '$routeParams', 'Characters', function ($scope, $location, $routeParams, Characters) {
         $scope.character = {
         };
         $scope.busy = false;
@@ -24,6 +24,16 @@
             });
         };
         refresh();
+
+        $scope.showLinkshell = function (linkshell) {
+            if (linkshell.UserCanView) {
+                $location.path('/Chat/Linkshells/' + linkshell.Name);
+            }
+        };
+
+        $scope.showTells = function (character) {
+            $location.path('/Chat/Tells/' + character.CharacterId);
+        };
 
         $scope.unstuck = function (character) {
             $scope.busy = true;

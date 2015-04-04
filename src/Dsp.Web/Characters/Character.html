@@ -11,9 +11,10 @@
         </dl>
 
         <button class="btn btn-default" type="button" ng-disabled="!character.CanUnstuck || busy" ng-click="unstuck(character)">Unstuck</button>
+        <button class="btn btn-default" type="button" ng-show="character.Owned" ng-click="showTells(character)">Tells</button>
 
         <h3>Linkshells</h3>
-        <table class="table">
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -21,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="linkshell in linkshells">
+                <tr ng-repeat="linkshell in linkshells" ng-click="showLinkshell(linkshell)">
                     <td>{{linkshell.Name}}</td>
                     <td>{{linkshell.StatusText}}</td>
                 </tr>

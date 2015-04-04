@@ -241,6 +241,9 @@
     <Content Include="Accounting\ChangePassword.html" />
     <Content Include="Auctions\AuctionHouse.js" />
     <Content Include="Characters\Characters.js" />
+    <Content Include="Chat\Chat.js" />
+    <Content Include="Chat\Linkshell.html" />
+    <Content Include="Chat\Tell.html" />
     <Content Include="dsp.css" />
     <Content Include="Dashboard\Dashboard.js" />
     <Content Include="dsp.js" />

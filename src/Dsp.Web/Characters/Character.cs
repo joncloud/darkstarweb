@@ -100,8 +100,6 @@ namespace Dsp.Web.Characters
         public bool InJail { get; set; }
 
         public bool Online { get; set; }
-
-        [JsonIgnore]
         public bool Owned { get; set; }
 
         public Dictionary<string, Job> Jobs { get; set; }

@@ -10,7 +10,7 @@
         });
     }]);
 
-    dspweb.controller('DashboardController', ['$scope', '$location', 'Characters', 'AuctionHouseItems', function ($scope, $location, Characters, AuctionHouseItems) {
+    dspweb.controller('DashboardController', ['$scope', 'Characters', 'AuctionHouseItems', function ($scope, Characters, AuctionHouseItems) {
         $scope.characters = [];
         Characters.getMy(function (response) {
             angular.forEach(response, function (item) {
