@@ -10,5 +10,6 @@ namespace Dsp.Web.Characters
         public string Name { get; set; }
         public LinkshellStatus Status { get; set; }
         public string StatusText { get { return Status.ToString(); } }
+        public bool UserCanView { get; set; }
     }
 }

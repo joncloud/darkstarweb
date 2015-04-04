@@ -61,6 +61,7 @@ namespace Dsp.Web.Characters
         {
             var action = new GetLinkshellsAction(_context);
             action.CharacterId = id;
+            action.OwnerAccountId = User.Identity.GetAccountId();
             action.PageSettings = pageSettings;
             action.RequestUri = Request.RequestUri;
             return action.Execute();
