@@ -168,12 +168,15 @@
     <Compile Include="Accounting\AccountActivity.cs" />
     <Compile Include="Accounting\AccountActivityChange.cs" />
     <Compile Include="Accounting\AccountContext.cs" />
+    <Compile Include="Accounting\AccountController.cs" />
     <Compile Include="Accounting\AccountingQueries.cs" />
     <Compile Include="Accounting\AccountRole.cs" />
     <Compile Include="Accounting\ActivitiesController.cs" />
     <Compile Include="Accounting\Activity.cs" />
     <Compile Include="Accounting\AuditActivityAction.cs" />
+    <Compile Include="Accounting\ChangePasswordAction.cs" />
     <Compile Include="Accounting\GetAllAccountActivities.cs" />
+    <Compile Include="Accounting\PasswordChangeRequest.cs" />
     <Compile Include="Accounting\Role.cs" />
     <Compile Include="ApiControllerHelpers.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -227,6 +230,7 @@
   <ItemGroup>
     <Content Include="Accounting\Accounting.js" />
     <Content Include="Accounting\Activities.html" />
+    <Content Include="Accounting\ChangePassword.html" />
     <Content Include="Auctions\AuctionHouse.js" />
     <Content Include="Auctions\AuctionHouse.min.html">
       <DependentUpon>AuctionHouse.html</DependentUpon>
