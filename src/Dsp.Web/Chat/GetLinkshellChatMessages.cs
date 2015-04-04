@@ -9,7 +9,7 @@ namespace Dsp.Web.Chat
 {
     public class GetLinkshellChatMessages : IControllerAction
     {
-        private DspContext _context;
+        private readonly DspContext _context;
 
         public GetLinkshellChatMessages(DspContext context)
         {
@@ -27,13 +27,8 @@ namespace Dsp.Web.Chat
             IOrderedQueryable<ChatMessage> query = _context.characters
                 .Where(c => c.accid == OwnerAccountId).SelectMany(c => c.character_inventories)
                 .Where(i => validLinkshellItems.Contains(i.itemId) && i.signature == LinkshellName)
-                .SelectMany(i => _context.audit_chats.Where(c => c.recipient == i.signature))
-                .Select(a => new ChatMessage
-                {
-                    MessageContents = a.message,
-                    Occurrence = a.datetime,
-                    Speaker = a.speaker
-                })
+                .SelectMany(i => _context.audit_chats.Where(c => c.type == "LINKSHELL" && c.recipient == i.signature))
+                .ToChatMessage()
                 .OrderByDescending(a => a.Occurrence);
 
             Page<ChatMessage> page = await Page.FromQueryAsync(query, PageSettings);

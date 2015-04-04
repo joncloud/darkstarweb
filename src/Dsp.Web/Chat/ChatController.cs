@@ -9,7 +9,7 @@ using System.Web.Http;
 namespace Dsp.Web.Chat
 {
     [Authorize]
-    [Route("api/Chat")]
+    [RoutePrefix("api/Chat")]
     public class ChatController : ApiController
     {
         private DspContext _context;
@@ -44,7 +44,12 @@ namespace Dsp.Web.Chat
         [Route("Tells/{id}")]
         public Task<HttpResponseMessage> GetTells(long id, [FromUri]PageSettings pageSettings)
         {
-            throw new NotImplementedException();
+            var action = new GetTellChatMessages(_context);
+            action.CharacterId = id;
+            action.OwnerAccountId = User.Identity.GetAccountId();
+            action.PageSettings = pageSettings;
+            action.RequestUri = Request.RequestUri;
+            return action.Execute();
         }
     }
 }

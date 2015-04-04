@@ -14,6 +14,7 @@ namespace Dsp.Web.Chat
             set { Message = Encoding.UTF8.GetString(value); }
         }
         public DateTime Occurrence { get; set; }
+        public string Recipient { get; set; }
         public string Speaker { get; set; }
     }
 }
