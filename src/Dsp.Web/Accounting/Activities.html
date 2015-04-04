@@ -1,0 +1,20 @@
+﻿<div class="container" ng-controller="ActivitiesController">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Account</th>
+                <th>Description</th>
+                <th>IP Address</th>
+                <th>Date/Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items">
+                <td>{{item.AccountName}}</td>
+                <td>{{item.Description}}</td>
+                <td>{{item.IPAddress}}</td>
+                <td>{{item.OccurrenceUtc}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

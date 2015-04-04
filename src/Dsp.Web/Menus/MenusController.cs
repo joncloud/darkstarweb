@@ -19,6 +19,7 @@ namespace Dsp.Web.Menus
             List<Menu> menus = new List<Menu>
             {
                 new Menu { Href = "#/Dashboard", Text = "Dashboard" },
+                new Menu { Href = "#/Activities", Text = "Activities", RequiredRoleName = Role.Administrator },
                 new Menu { Href = "#/AuctionHouse", Text = "Auction House" }
             };
 
