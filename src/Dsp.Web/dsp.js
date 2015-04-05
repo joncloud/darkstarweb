@@ -17,13 +17,23 @@
                         var linkPart = linkParts[i].split(' ');
 
                         // Parse out the URL to the related page, and how it is related.
-                        var href = linkPart[0].substring(1, linkPart[0].length);
+                        var href = linkPart[0].substring(1, linkPart[0].length - 1);
                         var rel = linkPart[1].split('"')[1];
-                        parts.push({
+                        var link = {
                             href: href,
                             rel: rel
-                        });
+                        };
+
+                        // Parse the parameters.
+                        var params = href.split('?')[1].split('&');
+                        for (var j = 0; j < params.length; j++) {
+                            var paramParts = params[j].split('=');
+                            link[paramParts[0]] = paramParts[1];
+                        }
+
+                        links.push(link);
                     }
+                    return links;
                 }
                 return null;
             }

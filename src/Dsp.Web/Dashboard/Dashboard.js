@@ -10,7 +10,7 @@
         });
     }]);
 
-    dspweb.controller('DashboardController', ['$scope', 'Characters', 'AuctionHouseItems', function ($scope, Characters, AuctionHouseItems) {
+    dspweb.controller('DashboardController', ['$scope', 'Characters', 'AuctionHouseItems', 'LinkParser', function ($scope, Characters, AuctionHouseItems, LinkParser) {
         $scope.characters = [];
         Characters.getMy(function (response) {
             angular.forEach(response, function (item) {
@@ -19,17 +19,20 @@
         });
 
         $scope.items = [];
-        AuctionHouseItems.getMy(function (response) {
+        AuctionHouseItems.getMy(function (response, headers) {
+            var links = LinkParser.parse(headers);
             angular.forEach(response, function (item) {
                 $scope.items.push(item);
             });
         });
 
         $scope.onlinePlayers = [];
-        Characters.getOnline(function (response) {
-            angular.forEach(response, function (item) {
-                $scope.onlinePlayers.push(item);
+        $scope.refreshOnline = function (pageNumber) {
+            Characters.getOnline({ pageNumber: pageNumber }, function (response, headers) {
+                $scope.onlinePlayerLinks = LinkParser.parse(headers);
+                $scope.onlinePlayers = response;
             });
-        });
+        };
+        $scope.refreshOnline();
     }]);
 })();

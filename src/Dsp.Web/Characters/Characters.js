@@ -62,7 +62,9 @@
                     method: 'GET', params: { id: '@id' }, isArray: true, url: '/api/Characters/:id/Linkshells'
                 },
                 getMy: { method: 'GET', params: { id: 'My' }, isArray: true },
-                getOnline: { method: 'GET', params: { id: 'Online' }, isArray: true },
+                getOnline: {
+                    method: 'GET', params: { id: 'Online' }, isArray: true
+                },
                 unstuck: {
                     method: 'PUT', params: { id: '@id' }, url: '/api/Characters/:id/Location'
                 }
