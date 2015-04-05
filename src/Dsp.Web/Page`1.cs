@@ -73,6 +73,7 @@ namespace Dsp.Web
             // Previous page
             if (currentPageNumber > 0)
             {
+                yield return CreateLinkValue(requestUri, queryArguments, "First", 0);
                 yield return CreateLinkValue(requestUri, queryArguments, "Previous", currentPageNumber - 1);
             }
 

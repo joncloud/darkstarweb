@@ -18,15 +18,14 @@
             });
         });
 
-        $scope.items = [];
-        AuctionHouseItems.getMy(function (response, headers) {
-            var links = LinkParser.parse(headers);
-            angular.forEach(response, function (item) {
-                $scope.items.push(item);
+        $scope.refreshItems = function (pageNumber) {
+            AuctionHouseItems.getMy({ pageNumber: pageNumber }, function (response, headers) {
+                $scope.itemLinks = LinkParser.parse(headers);
+                $scope.items = response;
             });
-        });
+        };
+        $scope.refreshItems();
 
-        $scope.onlinePlayers = [];
         $scope.refreshOnline = function (pageNumber) {
             Characters.getOnline({ pageNumber: pageNumber }, function (response, headers) {
                 $scope.onlinePlayerLinks = LinkParser.parse(headers);
