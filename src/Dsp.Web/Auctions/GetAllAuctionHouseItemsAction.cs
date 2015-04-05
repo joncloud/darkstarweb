@@ -22,7 +22,7 @@ namespace Dsp.Web.Auctions
         async public Task<HttpResponseMessage> Execute()
         {
             IOrderedQueryable<AuctionHouseItem> query = _context.auction_houses
-                .ToAuctionHouseItems()
+                .ToAuctionHouseItems(_context.characters)
                 .OrderByDescending(i => i.Id);
 
             Page<AuctionHouseItem> page = await Page.FromQueryAsync(query, PageSettings);

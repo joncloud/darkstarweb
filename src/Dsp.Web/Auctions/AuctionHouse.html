@@ -1,4 +1,8 @@
 ﻿<div class="container" ng-controller="AuctionHouseController">
+    <button type="button" class="btn btn-default" ng-repeat="link in itemLinks" ng-click="refreshItems(link.pageNumber)">
+        {{link.rel}}
+    </button>
+
     <table class="table">
         <thead>
             <tr>
@@ -14,9 +18,16 @@
             <tr ng-repeat="item in items">
                 <td>{{item.Date}}</td>
                 <td>{{item.ItemName}}</td>
-                <td>{{item.IsStack}}</td>
-                <td>{{item.SellerName}}</td>
-                <td>{{item.BuyerName}}</td>
+                <td>
+                    <span class="glyphicon glyphicon-unchecked" ng-hide="item.IsStack" />
+                    <span class="glyphicon glyphicon-check" ng-show="item.IsStack" />
+                </td>
+                <td>
+                    <a ng-href="#/Characters/{{item.SellerId}}">{{item.SellerName}}</a>
+                </td>
+                <td>
+                    <a ng-href="#/Characters/{{item.BuyerId}}>{{item.BuyerName}}</a>
+                </td>
                 <td>{{item.SalePrice}}</td>
             </tr>
         </tbody>

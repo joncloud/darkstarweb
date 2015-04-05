@@ -25,7 +25,7 @@ namespace Dsp.Web.Auctions
             IOrderedQueryable<AuctionHouseItem> query = _context.accounts.Where(a => a.id == OwnerAccountId)
                 .SelectMany(a => a.characters)
                 .SelectMany(c => c.auction_houses)
-                .ToAuctionHouseItems()
+                .ToAuctionHouseItems(_context.characters)
                 .OrderByDescending(i => i.Id);
 
             Page<AuctionHouseItem> page = await Page.FromQueryAsync(query, PageSettings);

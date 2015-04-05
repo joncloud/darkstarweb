@@ -11,12 +11,13 @@
     }]);
 
     dspweb.controller('AuctionHouseController', ['$scope', '$location', 'AuctionHouseItems', function ($scope, $location, AuctionHouseItems) {
-        $scope.items = [];
-        AuctionHouseItems.query(function (response) {
-            angular.forEach(response, function (item) {
-                $scope.items.push(item);
+        $scope.refreshItems = function (pageNumber) {
+            AuctionHouseItems.query({ pageNumber: pageNumber }, function (response, headers) {
+                $scope.itemLinks = LinkParser.parse(headers);
+                $scope.items = response;
             });
-        });
+        };
+        $scope.refreshItems();
     }]);
 
     dspweb.factory('AuctionHouseItems', ['$resource', function ($resource) {

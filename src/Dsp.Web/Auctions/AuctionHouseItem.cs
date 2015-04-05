@@ -9,6 +9,7 @@ namespace Dsp.Web.Auctions
     public class AuctionHouseItem
     {
         public string BuyerName { get; set; }
+        public long? BuyerId { get; set; }
         public DateTime? Date { get; set; }
 
         [JsonIgnore]
@@ -34,7 +35,7 @@ namespace Dsp.Web.Auctions
         }
 
         public long SalePrice { get; set; }
-
         public string SellerName { get; set; }
+        public long SellerId { get; set; }
     }
 }
