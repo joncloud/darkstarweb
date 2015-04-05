@@ -2,6 +2,35 @@
 
     var dspweb = angular.module('dspweb', ['ngAnimate', 'ngResource', 'ngRoute']);
 
+    dspweb.factory('LinkParser', function () {
+        var self = {
+            /**
+             * Parses any links from headers.
+             */
+            parse: function (headers) {
+                var linkText = headers().link;
+                if (linkText) {
+                    var links = [];
+
+                    var linkParts = linkText.split(', ');
+                    for (var i = 0; i < linkParts.length; i++) {
+                        var linkPart = linkParts[i].split(' ');
+
+                        // Parse out the URL to the related page, and how it is related.
+                        var href = linkPart[0].substring(1, linkPart[0].length);
+                        var rel = linkPart[1].split('"')[1];
+                        parts.push({
+                            href: href,
+                            rel: rel
+                        });
+                    }
+                }
+                return null;
+            }
+        };
+        return self;
+    });
+
     dspweb.factory('User', function () {
         var self = {
             userName: ''
