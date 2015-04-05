@@ -207,7 +207,7 @@
     <Compile Include="HomeController.cs" />
     <Compile Include="Auctions\AuctionHouseItem.cs" />
     <Compile Include="Auctions\AuctionHouseItemsController.cs" />
-    <Compile Include="Auctions\GetMyAuctionHouseItemsActon.cs" />
+    <Compile Include="Auctions\GetMyAuctionHouseItemsAction.cs" />
     <Compile Include="Auctions\GetAllAuctionHouseItemsAction.cs" />
     <Compile Include="Characters\ZoneIds.cs" />
     <Compile Include="Startup.Auth.cs" />

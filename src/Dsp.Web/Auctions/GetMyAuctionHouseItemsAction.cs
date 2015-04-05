@@ -7,11 +7,11 @@ using System.Web;
 
 namespace Dsp.Web.Auctions
 {
-    public class GetMyAuctionHouseItemsActon : IControllerAction
+    public class GetMyAuctionHouseItemsAction : IControllerAction
     {
         private readonly DspContext _context;
 
-        public GetMyAuctionHouseItemsActon(DspContext context)
+        public GetMyAuctionHouseItemsAction(DspContext context)
         {
             _context = context;
         }

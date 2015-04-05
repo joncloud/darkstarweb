@@ -44,7 +44,7 @@ namespace Dsp.Web.Auctions
         [Route("My")]
         public Task<HttpResponseMessage> GetMyItems([FromUri] PageSettings pageSettings)
         {
-            var action = new GetMyAuctionHouseItemsActon(_context);
+            var action = new GetMyAuctionHouseItemsAction(_context);
             action.OwnerAccountId = User.Identity.GetAccountId();
             action.PageSettings = pageSettings;
             action.RequestUri = Request.RequestUri;
