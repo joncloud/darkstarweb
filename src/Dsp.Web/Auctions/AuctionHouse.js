@@ -10,7 +10,7 @@
         });
     }]);
 
-    dspweb.controller('AuctionHouseController', ['$scope', '$location', 'AuctionHouseItems', function ($scope, $location, AuctionHouseItems) {
+    dspweb.controller('AuctionHouseController', ['$scope', '$location', 'AuctionHouseItems', 'LinkParser', function ($scope, $location, AuctionHouseItems, LinkParser) {
         $scope.refreshItems = function (pageNumber) {
             AuctionHouseItems.query({ pageNumber: pageNumber }, function (response, headers) {
                 $scope.itemLinks = LinkParser.parse(headers);

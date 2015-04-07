@@ -20,7 +20,8 @@ namespace Dsp.Web.Menus
             {
                 new Menu { Href = "#/Dashboard", Text = "Dashboard" },
                 new Menu { Href = "#/Activities", Text = "Activities", RequiredRoleName = Role.Administrator },
-                new Menu { Href = "#/AuctionHouse", Text = "Auction House" }
+                // TODO Design auction house to use menus.
+                //new Menu { Href = "#/AuctionHouse", Text = "Auction House" }
             };
 
             _menus = new ReadOnlyCollection<Menu>(menus);

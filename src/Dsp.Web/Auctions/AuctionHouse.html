@@ -10,8 +10,6 @@
                 <th>Item</th>
                 <th>Stack</th>
                 <th>Seller</th>
-                <th>Buyer</th>
-                <th>Sale Price</th>
             </tr>
         </thead>
         <tbody>
@@ -26,9 +24,8 @@
                     <a ng-href="#/Characters/{{item.SellerId}}">{{item.SellerName}}</a>
                 </td>
                 <td>
-                    <a ng-href="#/Characters/{{item.BuyerId}}>{{item.BuyerName}}</a>
+                    <a ng-href="#/Characters/{{item.BuyerId}}">{{item.BuyerName}}</a>
                 </td>
-                <td>{{item.SalePrice}}</td>
             </tr>
         </tbody>
     </table>
